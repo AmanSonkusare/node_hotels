@@ -54,6 +54,6 @@ res.status(500).json({error:'Internal sever error'});
     }
 })
 
-
+//command added for testing purpose
 module.exports=router;
 
