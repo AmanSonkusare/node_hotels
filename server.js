@@ -95,9 +95,11 @@ console.log("i am present in sever file");
 const express=require('express');
 const app = express();
 const db=require('./db');
+require('dotenv').config();//this is for .env file
+
 
 const person=require('./models/person');
-const menu =require('./models/menu');
+const menu =require('./models/menu'); 
 
 const bodyParse=require('body-parser');
 //const persson = require('./models/person');
@@ -141,8 +143,8 @@ const menuRouter =require('./routers/menuRouter');
 //use the router
 app.use('/menu',menuRouter)
 
+const PORT=process.eventNames.PORT || 3000;// this line come from require('dotenv').config();
 
-
-app.listen(3000,()=>{
+app.listen(PORT,()=>{
     console.log("i am present in port number 3000")
 })
