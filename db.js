@@ -7,7 +7,7 @@ require('dotenv').config();//this is for .env file
 
 //Define the mongoDB connection Url
 //const mongoURL='mongodb://localhost:27017/hotel';
-const mongoURL=process.env.MONGOURL_LOCAL//for local database
+//const mongoURL=process.env.MONGOURL_LOCAL//for local database
 //const mongoURL='mongodb+srv://amansonkusare:amansonkusare@cluster0.bnhgohv.mongodb.net/'// for online database
 //const mongoURL=process.env.MONGODB_URL;
 
@@ -15,7 +15,7 @@ const mongoURL=process.env.MONGOURL_LOCAL//for local database
 //const dotenv = require("dotenv").config();
 
 
-mongoose.connect(process.env.DB_CONNECT, {
+mongoose.connect(process.env.MONGODB_URL, {
 
     useUnifiedTopology: true,
 
